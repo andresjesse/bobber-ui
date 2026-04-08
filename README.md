@@ -18,25 +18,65 @@ Cross platform React Native UI:
 
 ## Installation
 
-1. Recommended:
+1. Start a brand new expo project using "Navigation (TypeScript)" template:
 
-Start a brand new expo project using "Navigation (TypeScript)" template; Then add bobber-ui dependency.
+`yarn create expo --template`
 
-2. Manual installation:
+> Select "Navigation (TypeScript)"
 
-Add bobber-ui:
-
-```sh
-yarn add andresjesse/bobber-ui
-```
-
-Add Async Storage:
+2. Add bobber-ui:
 
 ```sh
-npx expo install @react-native-async-storage/async-storage
+yarn add @andresjesse/bobber-ui
 ```
 
-Setup Expo Router (if your project does not use it yet): https://docs.expo.dev/router/installation/#manual-installation
+3. Add required dependencies:
+
+```sh
+npx expo install @react-native-async-storage/async-storage react-native-keyboard-controller zustand zod
+```
+
+4. Update your Root Layout (`app/_layout.tsx`):
+
+```tsx
+import { Modal, ThemedStatusBar, ThemeProvider } from "@andresjesse/bobber-ui";
+import { Stack } from "expo-router";
+import { KeyboardProvider } from "react-native-keyboard-controller";
+
+export default function RootLayout() {
+  return (
+    <KeyboardProvider>
+      <ThemeProvider defaultColorScheme="dark">
+        <ThemedStatusBar />
+
+        <Stack
+          screenOptions={{
+            headerShown: false,
+            animation: "fade",
+          }}
+        />
+
+        <Modal />
+      </ThemeProvider>
+    </KeyboardProvider>
+  );
+}
+```
+
+5. Create a Home Screen (`app/index.tsx`):
+
+```tsx
+import { Button, ScreenWrapper, Text } from "@andresjesse/bobber-ui";
+
+export default function Screen() {
+  return (
+    <ScreenWrapper.Scrollable>
+      <Text h1>Home</Text>
+      <Button title="Hello Bobber" />
+    </ScreenWrapper.Scrollable>
+  );
+}
+```
 
 ## Usage
 
