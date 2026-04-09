@@ -251,6 +251,8 @@ const persistImpl = ((
           set(stateFromStorage as S, true);
           if (migrated) {
             return setItem();
+          } else {
+            return null;
           }
         })
         .then(() => {
