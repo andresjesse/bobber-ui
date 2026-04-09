@@ -1,6 +1,6 @@
 {
   "name": "@andresjesse/bobber-ui",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Cross platform React Native UI.",
   "main": "./lib/module/index.js",
   "types": "./lib/typescript/src/index.d.ts",
