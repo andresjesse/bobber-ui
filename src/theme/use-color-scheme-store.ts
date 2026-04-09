@@ -1,7 +1,7 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { Platform } from "react-native";
 import { create } from "zustand";
-import { createJSONStorage, persist } from "zustand/middleware";
+import { createJSONStorage, persist } from "../helpers/custom-zustand-persist";
 
 type State = {
   colorScheme: "light" | "dark" | null;

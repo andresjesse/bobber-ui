@@ -8,14 +8,6 @@ Cross platform React Native UI:
 - **Customizable**: Bobbers are made to be unique. This lib allows the developer to customize components easily;
 - **Timeless**: The Bobber look never goes out of style because it’s based on classic proportions.
 
-## TODO:
-
-- Review this Readme;
-- Re-enable lefthook;
-- Test lib on empty Navigation template project;
-- Test lib in a clean empty Expo project;
-- Review use-modal-close-on-back usePreventRemove usage (currently disabled);
-
 ## Installation
 
 1. Start a brand new expo project using "Navigation (TypeScript)" template:
@@ -39,6 +31,8 @@ npx expo install @react-native-async-storage/async-storage react-native-keyboard
 4. Update your Root Layout (`app/_layout.tsx`):
 
 ```tsx
+// This is a minimal example, check "example" project for a full configuration.
+
 import { Modal, ThemedStatusBar, ThemeProvider } from "@andresjesse/bobber-ui";
 import { Stack } from "expo-router";
 import { KeyboardProvider } from "react-native-keyboard-controller";
@@ -97,6 +91,17 @@ To update this lib:
 - Copy your token and add it to `.npmrc`: `//registry.npmjs.org/:_authToken=YOUR_TOKEN_HERE`
 - `yarn prepare`
 - `yarn release`
+
+### TODO:
+
+- Re-enable lefthook;
+- Review use-modal-close-on-back usePreventRemove usage (currently disabled);
+
+## Known Issues
+
+**Zustand Persist**:
+
+- Zustand persist middleware, when imported as `import { createJSONStorage, persist } from "zustand/middleware"` causes _"Cannot use 'import.meta' outside a module"_ error on Web platform. I've added a custom file in `src/helpers` to avoid it.
 
 ## License
 
