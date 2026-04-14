@@ -13,3 +13,5 @@ Documentation
 
 - [Avatar](components/avatar.md)
 - [Badge](components/badge.md)
+- [Button](components/button.md)
+- [Card](components/card.md)

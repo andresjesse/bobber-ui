@@ -15,6 +15,10 @@ export default function CommonUICard() {
       <ExampleLink href="/common-ui/avatar" title="Avatar" />
 
       <ExampleLink href="/common-ui/badge" title="Badge" />
+
+      <ExampleLink href="/common-ui/button" title="Button" />
+
+      <ExampleLink href="/common-ui/card" title="Card" />
     </Card>
   );
 }
