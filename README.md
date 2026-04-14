@@ -96,6 +96,12 @@ To update this lib:
 - `yarn prepare`
 - `yarn release`
 
+To update [example](example) deploy:
+
+- `cd example`
+- `yarn predeploy`
+- `yarn deploy`
+
 ### TODO:
 
 - Re-enable lefthook;

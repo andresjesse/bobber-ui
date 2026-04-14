@@ -19,6 +19,7 @@ import {
 } from "@andresjesse/bobber-ui";
 
 import { z } from "zod";
+import CommonUICard from "../components/cards/common-ui-card";
 import ScreenWrappersCard from "../components/cards/screen-wrappers-card";
 import MainMenu from "../menus/main-menu";
 import t from "../services/lang";
@@ -50,6 +51,8 @@ export default function Screen() {
       <Header.Default title="Home" menu={<MainMenu />} />
 
       <ScreenWrappersCard />
+
+      <CommonUICard />
 
       <Card>
         <Card.Header title="Dialogs & Modals Card" />
@@ -542,36 +545,6 @@ export default function Screen() {
             onPress={() => console.log("pressed")}
           />
         </ToggleableContent>
-      </Card>
-
-      <Card>
-        <Card.Header title="Badges Card" />
-
-        <Flex direction="row" wrap="wrap" align="center">
-          <Badge size="xs" color="green">
-            XS
-          </Badge>
-
-          <Badge size="sm" color="lime">
-            SM
-          </Badge>
-
-          <Badge size="md" color="blue">
-            MD
-          </Badge>
-
-          <Badge size="lg" color="yellow">
-            LG
-          </Badge>
-
-          <Badge size="xl" color="orange">
-            XL
-          </Badge>
-
-          <Badge color="red">
-            <Icon type="material" name="notification-add" color="white" />
-          </Badge>
-        </Flex>
       </Card>
     </ScreenWrapper.Scrollable>
   );

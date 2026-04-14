@@ -9,7 +9,6 @@ import {
 } from "@andresjesse/bobber-ui";
 import { router } from "expo-router";
 import { useState } from "react";
-import DocsFloatingMenu from "../../components/docs-floating-menu";
 
 const paddings = ["xs", "sm", "md", "lg", "xl", "none"] as const;
 const gaps = ["xs", "sm", "md", "lg", "xl", 100] as const;
@@ -55,11 +54,6 @@ export default function Screen() {
           <Text key={index}>Scrollable Content {index}</Text>
         ))}
       </Card>
-
-      <DocsFloatingMenu
-        exampleUrl="https://github.com/andresjesse/bobber-ui/blob/main/example/app/screen-wrappers/scrollable.tsx"
-        docMd="https://github.com/andresjesse/bobber-ui/blob/main/docs/components/screen-wrappers/scrollable.md"
-      />
     </ScreenWrapper.Scrollable>
   );
 }

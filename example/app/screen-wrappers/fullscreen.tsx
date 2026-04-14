@@ -8,7 +8,6 @@ import {
 } from "@andresjesse/bobber-ui";
 import { router } from "expo-router";
 import { useState } from "react";
-import DocsFloatingMenu from "../../components/docs-floating-menu";
 
 export default function Screen() {
   const [center, setCenter] = useState(true);
@@ -39,11 +38,6 @@ export default function Screen() {
           onPress={() => router.back()}
         />
       </Card>
-
-      <DocsFloatingMenu
-        exampleUrl="https://github.com/andresjesse/bobber-ui/blob/main/example/app/screen-wrappers/fullscreen.tsx"
-        docMd="https://github.com/andresjesse/bobber-ui/blob/main/docs/components/screen-wrappers/fullscreen.md"
-      />
     </ScreenWrapper.Fullscreen>
   );
 }
