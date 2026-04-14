@@ -1,48 +1,18 @@
 import {
   Badge,
-  Button,
   Card,
-  Checkbox,
-  Form,
   Header,
   ScreenWrapper,
-  Select,
   Text,
-  TextInput,
   ToggleableContent,
-  useForm,
-  useModal,
 } from "@andresjesse/bobber-ui";
 
-import { z } from "zod";
 import CommonUICard from "../components/cards/common-ui-card";
 import DialogsModalsCard from "../components/cards/dialogs-modals-card";
 import ScreenWrappersCard from "../components/cards/screen-wrappers-card";
 import MainMenu from "../menus/main-menu";
-import t from "../services/lang";
 
 export default function Screen() {
-  const modal = useModal();
-
-  const form = useForm({
-    initialValues: {
-      email: "disabled@email.com",
-      password: "",
-      remember: false,
-      domain: null,
-    },
-    validations: {
-      email: z.email(t("Email inválido!")),
-      password: z.string().min(6, t("Senha muito curta!")),
-      remember: z
-        .boolean()
-        .refine((value) => value, t("Voce precisa marcar isto!")),
-    },
-    onSubmit: (values) => {
-      console.log("Screen:", values);
-    },
-  });
-
   return (
     <ScreenWrapper.Scrollable>
       <Header.Default title="Home" menu={<MainMenu />} />
@@ -52,45 +22,6 @@ export default function Screen() {
       <CommonUICard />
 
       <DialogsModalsCard />
-
-      <Card>
-        <Card.Header title="Form Card" />
-
-        <Form>
-          <TextInput
-            label="Email"
-            {...form.getInputProps("email")}
-            // disabled
-          />
-
-          <TextInput
-            label="Password"
-            secureTextEntry
-            {...form.getInputProps("password")}
-          />
-
-          <Checkbox
-            label="Remember me"
-            {...form.getBooleanInputProps("remember")}
-            // disabled
-          />
-
-          <Select
-            data={["abc.com", "xyz.com", "asd.org"]}
-            label="Domain"
-            {...form.getSelectProps("domain")}
-            defaultSelectedIndex={1}
-            allowDeselect
-            // disabled
-          />
-
-          <Button
-            title="Submit"
-            disabled={form.hasErrors}
-            onPress={form.submit}
-          />
-        </Form>
-      </Card>
 
       <Card>
         <Card.Header

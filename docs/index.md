@@ -22,18 +22,18 @@ Documentation
 - [Button](common-ui/button.md)
 - [Card](common-ui/card.md)
 - [Flex](common-ui/flex.md)
+- [Form](common-ui/form.md)
 
 **TODO**:
 
-- [Form](common-ui/form.md)
 - [Icon](common-ui/icon.md)
 - [Text](common-ui/text.md)
 - [ToggleableContent](common-ui/toggleable-content.md)
 
 ## Dialogs & Modals
 
-- [Dialogs](dialogs-modals/dialogs)
-- [Modals](dialogs-modals/modals)
+- [Dialogs](dialogs-modals/dialogs.md)
+- [Modals](dialogs-modals/modals.md)
 
 ## Theming
 
