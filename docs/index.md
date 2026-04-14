@@ -23,9 +23,6 @@ Documentation
 - [Card](common-ui/card.md)
 - [Flex](common-ui/flex.md)
 - [Form](common-ui/form.md)
-
-**TODO**:
-
 - [Icon](common-ui/icon.md)
 - [Text](common-ui/text.md)
 - [ToggleableContent](common-ui/toggleable-content.md)

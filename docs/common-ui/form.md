@@ -1,4 +1,4 @@
-## Flex
+## Form
 
 The `Form` component is a high-level wrapper that integrates `useForm` hook and `zod` to provide a type-safe, structured environment for managing input validation and submission logic.
 

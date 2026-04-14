@@ -23,6 +23,15 @@ export default function CommonUICard() {
       <ExampleLink href="/common-ui/flex" title="Flex" />
 
       <ExampleLink href="/common-ui/form" title="Form" />
+
+      <ExampleLink href="/common-ui/icon" title="Icon" />
+
+      <ExampleLink href="/common-ui/text" title="Text (Typhography)" />
+
+      <ExampleLink
+        href="/common-ui/toggleable-content"
+        title="Toggleable Content"
+      />
     </Card>
   );
 }
