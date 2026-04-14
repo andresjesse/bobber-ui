@@ -19,6 +19,8 @@ export default function CommonUICard() {
       <ExampleLink href="/common-ui/button" title="Button" />
 
       <ExampleLink href="/common-ui/card" title="Card" />
+
+      <ExampleLink href="/common-ui/flex" title="Flex" />
     </Card>
   );
 }
