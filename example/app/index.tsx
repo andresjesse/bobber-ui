@@ -1,5 +1,3 @@
-import { router } from "expo-router";
-
 import {
   Badge,
   Button,
@@ -21,6 +19,7 @@ import {
 } from "@andresjesse/bobber-ui";
 
 import { z } from "zod";
+import ScreenWrappersCard from "../components/cards/screen-wrappers-card";
 import MainMenu from "../menus/main-menu";
 import t from "../services/lang";
 
@@ -50,19 +49,7 @@ export default function Screen() {
     <ScreenWrapper.Scrollable>
       <Header.Default title="Home" menu={<MainMenu />} />
 
-      <Card>
-        <Card.Header title="ScreenWrappers Card" />
-
-        <Button
-          title="Open ScreenWrapper.Fullscreen"
-          onPress={() => router.push("/screen-wrappers/fullscreen")}
-        />
-
-        <Button
-          title="Open ScreenWrapper.Scrollable"
-          onPress={() => router.push("/screen-wrappers/scrollable")}
-        />
-      </Card>
+      <ScreenWrappersCard />
 
       <Card>
         <Card.Header title="Dialogs & Modals Card" />

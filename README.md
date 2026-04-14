@@ -10,6 +10,8 @@ Cross platform React Native UI:
 
 **Live Example**: [https://andresjesse.github.io/bobber-ui/](https://andresjesse.github.io/bobber-ui/)
 
+**Documentation**: [docs/index.md](docs/index.md)
+
 ## Installation
 
 1. Start a brand new expo project using "Navigation (TypeScript)" template:

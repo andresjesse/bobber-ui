@@ -8,6 +8,7 @@ import {
 } from "@andresjesse/bobber-ui";
 import { router } from "expo-router";
 import { useState } from "react";
+import DocsFloatingMenu from "../../components/docs-floating-menu";
 
 export default function Screen() {
   const [center, setCenter] = useState(true);
@@ -30,8 +31,19 @@ export default function Screen() {
           checked={keyboardAware}
           onChange={setKeyboardAware}
         />
-        <Button title="Login (navigate back)" onPress={() => router.back()} />
+        <Button title="Login" onPress={() => router.back()} />
+
+        <Button
+          variant="subtle"
+          title="Cancel (Navigate Back)"
+          onPress={() => router.back()}
+        />
       </Card>
+
+      <DocsFloatingMenu
+        exampleUrl="https://github.com/andresjesse/bobber-ui/blob/main/example/app/screen-wrappers/fullscreen.tsx"
+        docMd="https://github.com/andresjesse/bobber-ui/blob/main/docs/components/screen-wrappers/fullscreen.md"
+      />
     </ScreenWrapper.Fullscreen>
   );
 }
